@@ -1,8 +1,8 @@
 ﻿{
   "version": "1.0.0-*",
-  "description": "Kodj.DomainService Class Library",
+  "description": "Kodj.DomainService.Tests Class Library",
   "authors": [ "phihuynh" ],
-  "tags": [ "Kodj" ],
+  "tags": [ "" ],
   "projectUrl": "",
   "licenseUrl": "",
 
