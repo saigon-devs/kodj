@@ -1,6 +1,6 @@
 ﻿{
   "version": "1.0.0-*",
-  "description": "Kodj.DomainService Class Library",
+  "description": "Kodj.Service Class Library",
   "authors": [ "phihuynh" ],
   "tags": [ "Kodj" ],
   "projectUrl": "",
