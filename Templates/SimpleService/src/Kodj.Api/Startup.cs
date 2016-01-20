@@ -7,6 +7,8 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Kodj.Service;
+using Microsoft.Data.Entity;
 
 namespace Kodj.Api
 {
@@ -14,10 +16,11 @@ namespace Kodj.Api
     {
         public Startup(IHostingEnvironment env)
         {
-            // Set up configuration sources.
+            //Setup configuration sources
             var builder = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
+                .AddJsonFile(string.Format("appsettings.{0}.json", env.EnvironmentName))
                 .AddEnvironmentVariables();
+
             Configuration = builder.Build();
         }
 
@@ -28,6 +31,13 @@ namespace Kodj.Api
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddEntityFramework()
+                    .AddSqlServer()
+                    .AddDbContext<SampleDbContext>(options =>
+                        options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+
+            services.AddScoped<SampleService, SampleService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
