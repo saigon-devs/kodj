@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Data.Entity;
 using Kodj.Service.Entities;
+using Microsoft.Data.Sqlite;
 
 namespace Kodj.Service
 {

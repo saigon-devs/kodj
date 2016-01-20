@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Kodj.Service;
 using Microsoft.Data.Entity;
+using Microsoft.Data.Sqlite;
 
 namespace Kodj.Api
 {
@@ -31,11 +32,11 @@ namespace Kodj.Api
         {
             // Add framework services.
             services.AddMvc();
-
+            
             services.AddEntityFramework()
-                    .AddSqlServer()
+                    .AddSqlite()
                     .AddDbContext<SampleDbContext>(options =>
-                        options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+                        options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             services.AddScoped<SampleService, SampleService>();
         }

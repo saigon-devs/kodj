@@ -10,7 +10,8 @@
     "projectUrl": "",
     "licenseUrl": "",
     "commands": {
-        "run": "Kodj.Service"
+        "run": "Kodj.Service",
+        "ef": "EntityFramework.Commands"
     },
     "frameworks": {
         "dnxcore50": {
@@ -22,7 +23,7 @@
                 "System.Runtime": "4.0.21-beta-23516",
                 "System.Threading": "4.0.11-beta-23516",
                 "EntityFramework.Commands": "7.0.0-rc1-final",
-                "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final"
+                "EntityFramework.SQLite": "7.0.0-rc1-final"
             }
         }
     }

@@ -8,14 +8,13 @@ using Kodj.Service;
 namespace Kodj.Service.Migrations
 {
     [DbContext(typeof(SampleDbContext))]
-    [Migration("20160120033137_FirstCreate")]
+    [Migration("20160120061600_FirstCreate")]
     partial class FirstCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
 
             modelBuilder.Entity("Kodj.Service.Entities.SampleEntity", b =>
                 {
