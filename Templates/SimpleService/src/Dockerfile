@@ -8,6 +8,7 @@ WORKDIR /app/Kodj.Service
 RUN ["dnu", "restore"]
 WORKDIR /app/Kodj.Api
 RUN ["dnu", "restore"]
+RUN ["dnx", "database update"]
 
 EXPOSE 5000/tcp
 ENTRYPOINT ["dnx", "-p", "project.json", "web"]
