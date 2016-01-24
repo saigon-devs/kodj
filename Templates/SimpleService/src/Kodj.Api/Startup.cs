@@ -19,7 +19,7 @@ namespace Kodj.Api
         {
             //Setup configuration sources
             var builder = new ConfigurationBuilder()
-                .AddJsonFile(string.Format("appsettings.Production.json", env.EnvironmentName))
+                .AddJsonFile("appsettings.json")
                 .AddEnvironmentVariables();
 
             Configuration = builder.Build();
