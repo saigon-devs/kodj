@@ -234,3 +234,4 @@ _Pvt_Extensions
 
 # DEV Environment config
 **/*.dev*.json
+.DS_Store
